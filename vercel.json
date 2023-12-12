@@ -1,4 +1,10 @@
 {
+    "functions": {
+        "dependencies": {
+            "include": ["requirements.txt"],
+            "postInstallCommand": "pip install -r requirements.txt"
+        }
+    }
     "builds": [{
         "src": "P5/wsgi.py",
         "use": "@vercel/python",
