@@ -1,23 +1,23 @@
 {
-    "builds": [
-        {
-            "src": "P5/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb",
-                "runtime": "python3.9",
-                "buildCommand": "pip install --upgrade pip && pip install --no-cache-dir --disable-pip-version-check -r requirements.txt && ./build_files.sh"
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "P5/wsgi.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "P5/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9",
+        "buildCommand": "pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt && ./build_files.sh"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "P5/wsgi.py"
+    }
+  ]
 }
