@@ -11,3 +11,4 @@ virtualenv==20.24.4
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 psycopg2-binary==2.9.6
+dlib==19.22.0
