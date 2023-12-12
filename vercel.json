@@ -6,7 +6,7 @@
             "config": {
                 "maxLambdaSize": "15mb",
                 "runtime": "python3.9",
-                "buildCommand": "pip install -r requirements.txt && ./build_files.sh"
+                "buildCommand": "pip install --upgrade pip && pip install --no-cache-dir --disable-pip-version-check -r requirements.txt && ./build_files.sh"
             }
         }
     ],
