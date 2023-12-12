@@ -4,7 +4,7 @@ asgiref==3.4.1
 astunparse==1.6.3
 beautifulsoup4==4.10.0
 cachetools==4.2.4
-certifi==2023.12.13
+certifi==2023.11.17
 charset-normalizer==2.1.1
 click==8.0.4
 coloredlogs==15.0.1
