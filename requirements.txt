@@ -8,7 +8,7 @@ certifi==2023.11.17
 charset-normalizer==2.1.1
 click==8.0.4
 coloredlogs==15.0.1
-contourpy==0.6.0
+contourpy==1.2.0
 customtkinter==5.2.0
 cycler==0.11.0
 Cython==0.29.24
