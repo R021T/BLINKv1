@@ -1,18 +1,27 @@
 {
-    "builds": [{
-        "src": "P5/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    },
-    {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "staticfiles_build" }
-    },
+    "builds": [
+        {
+            "src": "P5/wsgi.py",
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "15mb",
+                "runtime": "python3.9"
+            }
+        },
+        {
+            "src": "build_files.sh",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "staticfiles_build"
+            }
+        }
+    ],
+    "functions": {
         "dependencies": {
-            "mysql": "^2.18.1",
-            "mariadb": "^2.5.3"
-    }],
+            "include": ["requirements.txt"],
+            "postInstallCommand": "pip install -r requirements.txt"
+        }
+    },
     "routes": [
         {
             "src": "/static/(.*)",
