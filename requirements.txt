@@ -44,7 +44,7 @@ Markdown==3.3.4
 markdown-it-py==3.0.0
 MarkupSafe==2.0.1
 matplotlib==3.4.3
-mdurl==2.0.0
+mdurl==0.1.2
 meson==0.59.0
 mpmath==1.2.1
 mysqlclient==2.1.0
