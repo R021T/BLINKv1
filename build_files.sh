@@ -13,6 +13,6 @@ pip install --upgrade pip
 pip install --disable-pip-version-check --target . --upgrade -r /vercel/path0/requirements.txt
 
 # Set MARIADB_CONFIG environment variable
-export MARIADB_CONFIG="\mysql_config.pl"  # Replace with the correct path
+export MARIADB_CONFIG="\mariadb_config.pl"  # Replace with the correct path
 
 echo "BUILD END"
