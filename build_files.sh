@@ -10,7 +10,7 @@ sudo apt-get install -y python3.9 python3.9-venv cmake
 python3.9 -m venv venv
 
 # Activate virtual environment
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+source venv/bin/activate
 
 # Upgrade pip
 pip install --upgrade pip
