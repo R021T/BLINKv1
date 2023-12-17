@@ -3,13 +3,8 @@
     {
       "src": "P5/wsgi.py",
       "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      },
-      "postBuild": "sh ./vercel/post-build.sh"
-    }
-  ],
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+  }],
   "routes": [
     {
       "src": "/(.*)",
