@@ -3,8 +3,16 @@
     {
       "src": "P5/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-  }],
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9"
+      },
+      "install": [
+        "pip install -r ./path/to/requirements.txt",
+        "apt-get install -y cmake"
+      ]
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
