@@ -21,7 +21,6 @@
       "memory": 1024,
       "includeFiles": ["P5/**"],
       "environment": {
-        // Add environment variables if needed
       },
       "package": {
         "include": ["P5/**"],
@@ -29,7 +28,7 @@
       },
       "build": {
         "env": {
-          "CMAKE_BINARY_URL": "https://cmake.org/files/v3.22/cmake-3.22.1-Linux-x86_64.sh"  // URL to the CMake binary, adjust as needed
+          "CMAKE_BINARY_URL": "https://cmake.org/files/v3.22/cmake-3.22.1-Linux-x86_64.sh"
         },
         "postBuild": "sh ./vercel/post-build.sh"
       }
