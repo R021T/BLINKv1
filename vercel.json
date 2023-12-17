@@ -6,7 +6,11 @@
       "config": {
         "maxLambdaSize": "15mb",
         "runtime": "python3.9"
-      }
+      },
+      "env": {
+        "CMAKE_BINARY_URL": "https://cmake.org/files/v3.22/cmake-3.22.1-Linux-x86_64.sh"
+      },
+      "postBuild": "sh ./vercel/post-build.sh"
     }
   ],
   "routes": [
@@ -14,24 +18,5 @@
       "src": "/(.*)",
       "dest": "P5/wsgi.py"
     }
-  ],
-  "functions": {
-    "myFunction": {
-      "runtime": "vercel-python@3.9",
-      "memory": 1024,
-      "includeFiles": ["P5/**"],
-      "environment": {
-      },
-      "package": {
-        "include": ["P5/**"],
-        "exclude": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json", "**/*.md"]
-      },
-      "build": {
-        "env": {
-          "CMAKE_BINARY_URL": "https://cmake.org/files/v3.22/cmake-3.22.1-Linux-x86_64.sh"
-        },
-        "postBuild": "sh ./vercel/post-build.sh"
-      }
-    }
-  }
+  ]
 }
