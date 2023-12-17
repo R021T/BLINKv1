@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+    <head>
+        <title>Blink</title>
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+            .display{
+                width: 50%;
+                height: 25%;
+                border-radius: 20px;
+                border: 4px solid rgb(0 0 0 / 0.2);
+                margin-top: 5%;
+                margin-left: 4.5%;
+                font-size: xx-large;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+
+            .morse{
+                float: right;
+                width: auto;
+                height: 75%;
+                border-radius: 20px;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                margin-top: 5%;
+                margin-right: 5%;
+            }
+
+            .start{
+                width: 7%;
+                height: 5%;
+                background: black;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                color: white;
+                border-radius: 10px;
+                margin-top: 5%;
+                margin-left: 15%;
+            }
+
+            .stop{
+                width: 7%;
+                height: 5%;
+                background: black;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                color: white;
+                border-radius: 10px;
+                margin-top: -3.5%;
+                margin-left: 25%;
+            }
+
+            .clear{
+                width: 7%;
+                height: 5%;
+                background: black;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                color: white;
+                border-radius: 10px;
+                margin-top: -4.5%;
+                margin-left: 35%;
+            }
+        </style>
+        <input type="text" name="display" class="display" readonly  value={{word}}>
+        <img src="{% static 'blink/images/morse.png' %}" class="morse">
+        <br>
+        <form action="start">
+            <input type="submit" value="START" class="start">
+        </form>
+        <form action="stop">
+            <input type="submit" value="STOP" class="stop">
+        </form>
+        <form action="clear">
+            <input type="submit" value="CLEAR" class="clear">
+        </form>
+    </body>
+</html>
